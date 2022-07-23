@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="./style/sign_in_up.css">
+  <link rel="stylesheet" href="./style/nav.css">
+  <link rel="stylesheet" href="./style/footer.css" />
+
+</head>
+
+<body>
+    <!-- nav bar code -->
+    <div class="nav-container">
+        <div class="nav-heading">
+            <div></div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png" alt="">
+            </div>
+            <div>
+                <input type="text" placeholder="Search">
+                <span class="material-icons md-dark md-inactive ">search</span>
+            </div>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="">MAKEUP</a></li>
+                <li><a href="#">HAIR CARE</a></li>
+                <li><a href="#">SKIN CARE</a></li>
+                <li><a href="#">HAIRSTYLES</a></li>
+                <li><a href="#">HEALTH & WELLNESS</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">TOOLS</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li id="account-tab"><a href="#">ACCOUNT</a> 
+                <ul>
+                    <li id="signup">Sign-Up</li>
+                    <li id="signin">Sign-In</li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+       
+    </div>
+    <div class="navbar-gap"></div>
+  <!-- sign-up code  -->
+    <div class="container">
+       
+        <form action="" id="form">
+            <h2>Sign Up</h2>
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter Your Full Name" id="name" >
+                <label>Email</label>
+                <input type="email" placeholder="Enter Your Email" id="email">
+                <label>Password</label>
+                <input type="password" placeholder="Create Password" id="pass">
+                <div id="terms">By signing up, I accept the STYLECRAZE
+                    <span>
+                        <a href="">Terms of Service</a>
+                    </span>
+                    and acknowledge the 
+                    <span>
+                        <a href="">Privacy Policy</a>
+                    </span>
+                </div>
+                <input type="submit" value="SIGN UP" id="submit" disabled>
+                <p>Already have an account?
+                    <span>
+                        <a id="haveaccount" href="sign_in.html">Sign In</a>
+                    </span></p>
+        </form>
+      
+    </div>
+<!-- footer code start -->
+<div class="footer-container">
+    <div id="ft-list1">
+      <ul>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Image Usage Policy</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Editorial Guidelines</a></li>
+        <li><a href="">Join Our Medical Board</a></li>
+        <li><a href="">Press Room</a></li>
+      </ul>
+    </div>
+    <div id="ft-list2">
+      <ul>
+          <li><a href="">Advertise With Us</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Terms Of Use</a></li>
+          <li><a href="">Affiliate Disclosure</a></li>
+          <li><a href="">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div id="ft-list3">
+      <h2>Follow us</h2>
+      <div id="ft-social-imgs">
+          <img src="https://www.stylecraze.com/wp-content/themes/buddyboss-child/images/svg-image/facebook-f.svg" alt="">
+          <img src="https://www.stylecraze.com/wp-content/themes/buddyboss-child/images/svg-image/pinterest-p.svg" alt="">
+          <img src="https://www.stylecraze.com/wp-content/themes/buddyboss-child/images/svg-image/twitter.svg" alt="">
+          <img src="https://www.stylecraze.com/wp-content/themes/buddyboss-child/images/svg-image/instagram.svg" alt="">
+          <img src="https://www.stylecraze.com/wp-content/themes/buddyboss-child/images/svg-image/youtube.svg" alt="">
+      </div>
+    </div>
+    <div id="ft-list4">
+      <ul>
+          <li><a href="">Our Sister Sites</a></li>
+          <li><a href="">MomJunction</a></li>
+          <li><a href="">The BridalBox</a></li>
+          <li><a href="">Skinkraft</a></li>
+          <li><a href="">Vedix</a></li>
+      </ul>
+    </div>
+   
+  </div>
+  <div class="ft-credit">
+      <h3>Copyright © 2011 - 2022 <span><a href="">IncNut Stylecraze Private Limited.</a></span> All rights reserved.</h3>
+      <p>StyleCraze provides content of general nature that is designed for informational purposes only. The content is not intended to be a substitute</p>
+      <p>for professional medical advice, diagnosis, or treatment. <span><a href="">Click here for additional information.</a></span></p>
+    </div>
+<!-- footer code end -->
+</body>
+</html>
+<script src="./script/nav.js"></script>
+
+<script>
+let form=document.querySelector("form");
+let submitbtn=document.querySelector("#submit");
+form.pass.addEventListener("keyup",isfilled);
+function isfilled(event)
+{
+    let pvalue=event.currentTarget.value
+    if(pvalue=="")
+    {
+       
+        submitbtn.disabled = true
+    }
+    else
+    {
+        submitbtn.disabled = false
+        submitbtn.style.cursor="pointer";
+    }
+}
+
+let userData=JSON.parse(localStorage.getItem("userdata")) || [];
+form.addEventListener("submit",function(event){
+    event.preventDefault();
+    let obj={
+                user_name:form.name.value,
+                user_email:form.email.value,
+                user_pass:form.pass.value
+            }
+            // if(obj.user_pass.length<6)
+            // {
+            //     alert("Paasword length Should Be More than 5 ")
+            //     event.preventDefault();
+            // }
+            // else{
+            //     console.log(obj)
+            // }
+            userData.push(obj);
+            localStorage.setItem("userdata",JSON.stringify(userData));
+            // alert("sign-Up Sucessfuly")
+            let output=confirm("Sign-Up SUCCESSFUL..!!! \n Wanna.. Log In ??")
+            if(output==true)
+            {
+                window.location.href = "sign_in.html";
+            }
+           
+           
+            // window.location.replace("https://masaischool.com/courses/");
+
+});
+</script>
