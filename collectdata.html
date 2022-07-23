@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="./style/sign_in_up.css">
-  <link rel="stylesheet" href="./style/nav.css">
-  <link rel="stylesheet" href="./style/footer.css" />
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/collectdata.css">
+    <link rel="stylesheet" href="./style/footer.css" />
 
 </head>
-
 <body>
-    <!-- nav bar code -->
+    <!-- nav bar code start  -->
+    <!-- nav bar code end  -->
     <div class="nav-container">
         <div class="nav-heading">
             <div></div>
             <div>
-                <img src="https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png" alt="">
+                <img  src="https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png" alt="">
             </div>
             <div>
                 <input type="text" placeholder="Search">
@@ -46,34 +46,49 @@
        
     </div>
     <div class="navbar-gap"></div>
-  <!-- sign-up code  -->
-    <div class="container">
+    <!-- nav create blog page start  -->
+
+
+    <div class="collect-container">
        
-        <form action="" id="form">
-            <h2>Sign Up</h2>
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter Your Full Name" id="name" >
-                <label>Email</label>
-                <input type="email" placeholder="Enter Your Email" id="email">
-                <label>Password</label>
-                <input type="password" placeholder="Create Password" id="pass">
-                <div id="terms">By signing up, I accept the STYLECRAZE
-                    <span>
-                        <a href="">Terms of Service</a>
-                    </span>
-                    and acknowledge the 
-                    <span>
-                        <a href="">Privacy Policy</a>
-                    </span>
-                </div>
-                <input type="submit" value="SIGN UP" id="submit" disabled>
-                <p>Already have an account?
-                    <span>
-                        <a id="haveaccount" href="sign_in.html">Sign In</a>
-                    </span></p>
+        <form action="" id="blogform">
+            <h1>Create And Post Blog</h1>
+            <label for="">Title:-</label>
+            <input type="text" placeholder="Blog title" id="title">
+            <label for="">Picture Link :-</label>
+            <input type="text" placeholder="Picture link" id="plink">
+            <select name="" id="category">
+                <option value="">Select Category</option>
+                    <option value="MakeUp">MAKE UP</option>
+                    <option value="HaireCare">HAIR CARE</option>
+                    <option value="SkinCare">SKIN CARE</option>
+            </select>
+            <select name="" id="Subcategory">
+                <option value="">Sub Category</option>
+                <optgroup label="MAKE UP">
+                    <option value="MehandiDesigns">Mehandi Designs</option>
+                    <option value="NailArt">Nail Art</option>
+                    <option value="FaceMakeup">Face Makeup</option>
+                </optgroup>
+                <optgroup label="HAIR CARE"> 
+                    <option value="Dandruff">Dandruff</option>
+                    <option value="DryHairCare">Dry Hair Care</option>
+                    <option value="HairTreatment">Hair Treatment</option>
+                </optgroup>
+                <optgroup label="SKIN CARE"> 
+                    <option value="Sunscreen">Sunscreen</option>
+                    <option value="DrySkin">Dry Skin</option>
+                    <option value="SkinCareIdeas">Skin Care Ideas</option>
+                </optgroup>
+                    
+            </select>
+            <label for="">Blog Content :-</label>
+            <textarea name="" id="blogcontent" cols="" >Start Writing</textarea>
+            <input type="submit" name="Submit" id="submitBTN">
         </form>
-      
     </div>
+    <!-- nav create blog page end  -->
+
 <!-- footer code start -->
 <div class="footer-container">
     <div id="ft-list1">
@@ -122,56 +137,8 @@
       <p>for professional medical advice, diagnosis, or treatment. <span><a href="">Click here for additional information.</a></span></p>
     </div>
 <!-- footer code end -->
+
 </body>
 </html>
+<script src="./script/collectdata.js"></script>
 <script src="./script/nav.js"></script>
-
-<script>
-let form=document.querySelector("form");
-let submitbtn=document.querySelector("#submit");
-form.pass.addEventListener("keyup",isfilled);
-function isfilled(event)
-{
-    let pvalue=event.currentTarget.value
-    if(pvalue=="")
-    {
-       
-        submitbtn.disabled = true
-    }
-    else
-    {
-        submitbtn.disabled = false
-        submitbtn.style.cursor="pointer";
-    }
-}
-
-let userData=JSON.parse(localStorage.getItem("userdata")) || [];
-form.addEventListener("submit",function(event){
-    event.preventDefault();
-    let obj={
-                user_name:form.name.value,
-                user_email:form.email.value,
-                user_pass:form.pass.value
-            }
-            // if(obj.user_pass.length<6)
-            // {
-            //     alert("Paasword length Should Be More than 5 ")
-            //     event.preventDefault();
-            // }
-            // else{
-            //     console.log(obj)
-            // }
-            userData.push(obj);
-            localStorage.setItem("userdata",JSON.stringify(userData));
-            // alert("sign-Up Sucessfuly")
-            let output=confirm("Sign-Up SUCCESSFUL..!!! \n Wanna.. Log In ??")
-            if(output==true)
-            {
-                window.location.href = "sign_in.html";
-            }
-           
-           
-            // window.location.replace("https://masaischool.com/courses/");
-
-});
-</script>
