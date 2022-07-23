@@ -4,7 +4,10 @@
     display: flex;
     justify-content: center;
     padding-top: 3%;
-    border-top: 1px solid #FE5D74;
+    background-color: rgb(243,242,243);
+    /* border-top: 1px solid #FE5D74; */
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    padding: 2% 5%;
     /* border: 1px solid red; */
 }
 .footer-container>div{

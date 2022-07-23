@@ -30,9 +30,9 @@
     </div>
     <div class="nav-menu">
         <ul>
-            <li><a href="">MAKEUP</a></li>
-            <li><a href="#">HAIR CARE</a></li>
-            <li><a href="#">SKIN CARE</a></li>
+            <li><a href="./makeup.html">MAKEUP</a></li>
+            <li><a href="./haircare.html">HAIR CARE</a></li>
+            <li><a href="./skincare.html">SKIN CARE</a></li>
             <li><a href="#">HAIRSTYLES</a></li>
             <li><a href="#">HEALTH & WELLNESS</a></li>
             <li><a href="#">NEWS</a></li>
@@ -153,6 +153,7 @@ let flag=true;
           alert("Log-in Sucsess.!!");
           localStorage.setItem("loginFlag",JSON.stringify(1));
            window.location.replace("index.html"); 
+           return;
         }
         if(flag==true){
           alert("Email or Password Incorrect");
