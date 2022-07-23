@@ -102,6 +102,7 @@ body{
     text-align: right;
     width: 90%;
     font-size: 20px;
+    margin-bottom: 2%;
 }
 #read-more>a{
     color: red;
@@ -109,16 +110,131 @@ body{
  /* <!-- read more END  --> */
  /* <!-- second  Hair Care start  --> */
  .one-plus-two-banner{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
-    width: 85%;
+    width: 89%;
     background-color:#FF5C75 ;
-    padding: 0% 7%;
+    padding: 3% 6%;
+
  }
  .one-plus-two-banner>div{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
  }
+ .one-plus-two-banner>div>img,
+ .one-plus-two-banner>div:last-child>div>img
+ {
+    /* border: 1px solid green; */
+    width: 60%;
+   border-radius: 10px;
+  
+ }
+ #white-box{
+    /* border: 1px solid green; */
+    background-color: white;
+    width: 50%;
+    padding: 3% 4%;
+    margin-left: -5%;
+    border-radius: 10px;
+ }
+ .one-plus-two-banner>div p{
+    font-size: 21px;
+    line-height: 150%;
+ }
+ .one-plus-two-banner>div:last-child{
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+    margin-top: 5%;
+ }
+ .one-plus-two-banner>div:last-child>div{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 49%;
+   
+ }
 /* <!-- second  Hair Care end  --> */
+
+/* <!-- in press section start--> */
+.press-container{
+    background-color:#FF5C75 ;
+    margin: auto;
+    width: 85%;
+   padding: 3% 7.5%;
+    
+}
+.press-container>h1{
+    text-align: center;
+    color: white;
+    margin-top: 0%;
+    padding: 0%;
+
+}
+.press-container>div{
+    /* border: 1px solid green; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+
+}
+.press-container>div>div{
+    /* border: 1px solid green; */
+    background-color: white;
+    padding: 2% 2%;
+    border-radius: 10px;
+ 
+}
+.press-container>div>div img,
+.press-container>div>div h2
+{
+   text-align: center;
+}
+/* <!-- in press section end--> */
+
+/* <!-- medical reviewers  section start--> */
+.reviewers{
+    /* border: 1px solid green; */
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding: 2% 0%;
+}
+.reviewers>div>div{
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 10%;
+    
+    
+}
+.reviewers>div>div img{
+ width: 30%;
+}
+.reviewers>div{
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 5%;
+    padding: 1% 0%;
+}
+.reviewers>button{
+    margin: auto;
+    font-size: 18px;
+    padding: 1.5% 3%;
+    background-color: #FE5D74;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* <!-- medical reviewers  section end-->  */
