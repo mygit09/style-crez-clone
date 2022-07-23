@@ -1,0 +1,41 @@
+.dashbord_container{
+    margin: auto;
+    margin-top: 12%;
+    width: 85%;
+  
+}
+.post_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 2%;
+    margin-bottom: 5%;
+    
+}
+#post-count{
+    font-size: 20px;
+    font-weight: bold;
+}
+.dashbord_container>h1{
+text-align: center;
+}
+.post_container>div{
+    width: 90%;
+    border-radius: 10px;
+    padding: 1% 2%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.post_container img{
+    width: 100%;
+}
+#deletebtn_span{
+    padding: 0%;
+    margin-top: -10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#deletebtn_span>button{
+    color: red;
+
+}

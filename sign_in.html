@@ -153,6 +153,7 @@ let flag=true;
           alert("Log-in Sucsess.!!");
           localStorage.setItem("loginFlag",JSON.stringify(1));
            window.location.replace("index.html"); 
+           return;
         }
         if(flag==true){
           alert("Email or Password Incorrect");

@@ -17,7 +17,8 @@ function display(haicareLS){
         
 div.addEventListener("click",function(e){
     e.preventDefault();
-    console.log(elem);
+    itemdisplay(elem);
+   
 })
 
         container.append(div)
@@ -58,3 +59,8 @@ Scat3.addEventListener('click',function(e){
     display(filterdata);
 })
 
+function itemdisplay(elem)
+{
+    let item=localStorage.setItem("item",JSON.stringify(elem));
+    window.location.href="product_makeup.html";
+}

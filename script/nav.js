@@ -10,6 +10,17 @@ if(loginflag!==0)
     account.innerText=name;
     account.style.color="#FF5C75";
     account.style.fontSize="18px";
+    account.addEventListener("click",function(){
+        window.location.href="./userdashbord.html";
+    })
+
+    let postBLog=document.querySelector(".nav-heading>div:first-child");
+    let postBTN= document.createElement('button');
+    postBTN.innerText="+ Post Blog";
+    postBTN.addEventListener("click",function(){
+        window.location.href="./collectdata.html";
+    })
+    postBLog.append(postBTN);
     }
     else{
         document.querySelector('#signup').addEventListener("click",function(){

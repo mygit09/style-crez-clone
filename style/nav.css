@@ -111,3 +111,20 @@ body{
    cursor: pointer;
    
 }
+.nav-heading>div:first-child>button
+{
+   background-color: white;
+   font-size: 18px;
+   padding: 4% 14%;
+   margin-left:20%;
+border-radius: 10px;
+border: 1px solid #FF5C75;
+color: #FF5C75;
+cursor: pointer;
+}
+.nav-heading>div:first-child>button:hover
+{
+    border: 1px solid white;
+    background-color: #FF5C75;
+    color: white;
+}
