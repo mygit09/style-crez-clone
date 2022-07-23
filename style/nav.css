@@ -1,17 +1,23 @@
 body{
-    margin: 0%;
     padding: 0%;
+    margin: 0%;
 }
+
 .nav-container{
-    border: 1px solid red;
-    width: 90%;
-    margin: auto;
+    /* border: 1px solid red; */
+    width: 95%;
     height: 100px;
-    margin-top: 1%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: white;
+    margin: auto;
+    padding: 0% 2.5%;
+    position: fixed;
+   top: 0%;
+   padding-top: 1%;
 
 }
 .nav-heading{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,14 +60,15 @@ body{
     list-style-type:none;
     padding: 0% 4%;
     position: relative;
+     /* margin-top: 2%; */
+
    
 }
 .nav-menu>ul>li{
-    font-size: 20px;
-    border-right: 2px solid red;
+    font-size: 16px;
     margin: auto;
     display: inline-block;
-    padding-right: 0.8%;
+   
 
 }
 .nav-menu>ul>li>a{
@@ -71,6 +78,32 @@ body{
 .nav-menu>ul>li:last-child{
     border: none;
 }
-
-
+#account-tab>ul{
+    /* border: 1px solid red; */
+    list-style-type:none;
+    padding-top: 0.5%;
+    position: absolute;
+    padding-left: 0%;
+    display: none;
+    min-width: 100px;
+    background-color: white;
+}
+#account-tab>ul li{
+   text-align: center;
+   margin-bottom: 5%; 
+   font-size:18px;
+   margin-top: 5%;
+   
+}
+#account-tab>ul li:hover{
+    background-color: lightgray;
+    color: teal;
+    font-size: 20px;
+}
+#account-tab:hover ul{
+   display: block;
+}
+.navbar-gap{
+    margin-top: 8.5%;
+}
 

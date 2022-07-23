@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0%;
+    
+}
+.first-banner{
+    width: 85%;
+    margin: auto;
+    display: flex;
+}
+.first-banner>div{
+   width: 33%;
+}
+.first-banner img{
+    width:100%;
+}
+.first-banner h2{
+    width:90%;
+    text-align: center;
+}
+
+/* social media follower start*/
+
+ .follower-banner{
+    /* border: 1px solid red; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    margin-top: 2%;
+ }
+ .follower-banner>div{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+ }
+ .follower-banner>div>div{
+    padding: 3% 6%;
+   
+ }
+ .follower-banner>div>div:first-child{
+    background-color: #3B5898;
+    color:#EAEBEA ;
+ }
+ .follower-banner>div>div:last-child{
+    background-color: #EAEBEA;
+    color: #3B5898;
+ }
+/* social media follower end*/
+#banner-box-heading{
+    text-decoration: underline;
+    text-align: center;
+    padding-top:  2%;
+}
+/* <!-- first MAKEUP start  --> */
+ .one-plus-three-banner{
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 85%;
+    margin-top: 2%;
+
+ }
+ .one-plus-three-banner>div:first-child,
+ .one-plus-three-banner>div:last-child{
+   
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+ }
+ .one-plus-three-banner>div:first-child>div:first-child{
+    /* border: 1px solid red; */
+    width: 66%;
+ }
+ .one-plus-three-banner>div:first-child>div:last-child{
+    /* border: 1px solid red; */
+    width: 32%;
+ }
+ .one-plus-three-banner img{
+    width: 100%;
+ }
+ .one-plus-three-banner p{
+   font-size: 21px;
+ }
+
+ .one-plus-three-banner>div:last-child{
+    margin-top: 4%;
+ }
+ .one-plus-three-banner>div:last-child>div{
+    width:32%;
+ }
+
+ /* <!-- first MAKEUP END  --> */
+ /* <!-- read more start  --> */
+#read-more{
+    text-align: right;
+    width: 90%;
+    font-size: 20px;
+}
+#read-more>a{
+    color: red;
+}
+ /* <!-- read more END  --> */
+ /* <!-- second  Hair Care start  --> */
+ .one-plus-two-banner{
+    border: 1px solid red;
+    margin: auto;
+    width: 85%;
+    background-color:#FF5C75 ;
+    padding: 0% 7%;
+ }
+ .one-plus-two-banner>div{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+/* <!-- second  Hair Care end  --> */

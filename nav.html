@@ -7,13 +7,15 @@
     <title>Nav-bar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./style/nav.css">
+
+
 </head>
 <body>
     <div class="nav-container">
         <div class="nav-heading">
             <div></div>
             <div>
-                <img src="https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png" alt="">
+                <img  src="https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png" alt="">
             </div>
             <div>
                 <input type="text" placeholder="Search">
@@ -22,7 +24,7 @@
         </div>
         <div class="nav-menu">
             <ul>
-                <li><a href="#">MAKEUP</a></li>
+                <li><a href="">MAKEUP</a></li>
                 <li><a href="#">HAIR CARE</a></li>
                 <li><a href="#">SKIN CARE</a></li>
                 <li><a href="#">HAIRSTYLES</a></li>
@@ -30,11 +32,16 @@
                 <li><a href="#">NEWS</a></li>
                 <li><a href="#">TOOLS</a></li>
                 <li><a href="#">ABOUT US</a></li>
-                <li ><a href="#">ACCOUNT</a> </li>
+                <li id="account-tab"><a href="#">ACCOUNT</a> 
+                <ul>
+                    <li id="signup">Sign-Up</li>
+                    <li id="signin">Sign-In</li>
+                </ul>
+                </li>
             </ul>
         </div>
        
     </div>
 </body>
 </html>
-<script src="nav.js"></script>
+<script src="./script/nav.js"></script>

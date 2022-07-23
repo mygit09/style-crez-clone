@@ -1,0 +1,51 @@
+
+.container{
+    margin: auto;
+    /* border: 1px solid red; */
+    width:38%;
+    padding: 2%;
+}
+#form{
+    text-align: center;
+    margin: auto;
+    /* border: 1px solid rgb(77, 255, 0); */
+    width: 80%;
+    padding: 4% 5%;
+    /* margin-top: 5%;
+    margin-bottom: 3%; */
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+h2{
+    margin-bottom: 5%;
+}
+#name,#email,#pass{
+    border: 1px solid rgb(215, 215, 215);
+    display: block;
+    width: 96%;
+    margin: 1% 0%;
+    padding: 3.5% 2%;
+    font-size: 15px;
+    margin-bottom: 6%;
+    border-radius: 5px;
+
+}
+label{
+   text-align: left;
+   display: block; 
+}
+#terms{
+    font-size: 13px;
+}
+#submit{
+    width: 99%;
+    margin: 5% 0%;
+   font-size: 15px;
+   padding: 3% 0%;
+   border-radius: 10px;
+   border: 1px solid rgb(215, 215, 215);
+   cursor: not-allowed;
+}
+#haveaccount{
+   text-decoration: none;
+}
