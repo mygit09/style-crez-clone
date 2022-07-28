@@ -20,6 +20,7 @@
 text-align: center;
 }
 .post_container>div{
+    cursor: pointer;
     width: 90%;
     border-radius: 10px;
     padding: 1% 2%;

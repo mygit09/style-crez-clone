@@ -38,10 +38,15 @@ function display(makeupData){
         let date = document.createElement('p');
         date.innerText=`Publish Date:- ${elem.date}`;
         
-        div.addEventListener("click",function(e){
+        bimg.addEventListener("click",function(e){
         e.preventDefault();
-        console.log(elem);
+        itemdisplay(elem);
         })
+        title.addEventListener("click",function(e){
+            e.preventDefault();
+            itemdisplay(elem);
+            })
+       
 
         container.append(div)
         div1.append(date,Dbtn)
@@ -99,4 +104,10 @@ function deleteBlog(elem,index){
     localStorage.setItem("userBlogs",JSON.stringify(postedBlog));
     display(postedBlog);
 
+}
+
+function itemdisplay(elem)
+{
+    let item=localStorage.setItem("item",JSON.stringify(elem));
+    window.location.href="product_makeup.html";
 }

@@ -54,9 +54,9 @@
        
         <form action="" id="form">
             <h2>Sign In</h2>
-                <label>Email</label>
+                <label>Email :-</label>
                 <input type="email" placeholder="Enter Email" id="email">
-                <label>Password</label>
+                <label>Password :-</label>
                 <input type="text" placeholder="Enter Password" id="pass">
                 <a id="haveaccount" href="">Forget Password?</a>
                 <input type="submit" value="SIGN IN" id="submit" >
@@ -153,7 +153,7 @@ let flag=true;
           alert("Log-in Sucsess.!!");
           localStorage.setItem("loginFlag",JSON.stringify(1));
            window.location.replace("index.html"); 
-           return;
+          
         }
         if(flag==true){
           alert("Email or Password Incorrect");

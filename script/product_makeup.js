@@ -17,6 +17,8 @@ function displayitemm(item)
     const itemcontent = document.createElement('p');
     itemcontent.innerText=item.content;
 
+   
+
     leftbox.append(itemtitle,itemdate,itemimg,itemcontent)
 }
 displayitemm(item);
@@ -30,7 +32,7 @@ let haicareLS=JSON.parse(localStorage.getItem("haicareLS")) || [];
 
 if(item.category=="HaireCare")
 {
-    displayadd(skincareLS);
+    displayadd(haicareLS);
 }
 else if(item.category=="MakeUp"){
     displayadd(makeupLS);
@@ -51,9 +53,19 @@ else if(item.category=="SkinCare"){
 
         let heading=document.createElement("h5");
         heading.innerText=elem.title;
+        
+        div.addEventListener("click",function(e){
+            e.preventDefault();
+            itemdisplay(elem);
+        })
+
         topSearch.append(div)
         div.append(addimg,heading);
     })
     
    }
-    
+    function itemdisplay(elem)
+{
+    let item=localStorage.setItem("item",JSON.stringify(elem));
+    window.location.href="product_makeup.html";
+}
