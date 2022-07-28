@@ -1,3 +1,6 @@
+let loginFlag=JSON.parse(localStorage.getItem("loginFlag"));
+if(loginFlag==null)
+{
 let makeupLS=[
 
     // cat=makeup sub=mehendi
@@ -152,7 +155,6 @@ let makeupLS=[
             }
 
 ];
-console.log(makeupLS);
 localStorage.setItem("makeupLS",JSON.stringify(makeupLS))
 makeupLS=JSON.parse(localStorage.getItem("makeupLS"));
 
@@ -398,3 +400,10 @@ let haicareLS=[
 ]
 localStorage.setItem("haicareLS",JSON.stringify(haicareLS))
 haicareLS=JSON.parse(localStorage.getItem("haicareLS"));
+
+console.log("loaded");
+}
+else{
+console.log("not loaded");
+
+}

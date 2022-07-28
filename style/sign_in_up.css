@@ -9,7 +9,7 @@
     text-align: center;
     margin: auto;
     /* border: 1px solid rgb(77, 255, 0); */
-    width: 80%;
+    width: 70%;
     padding: 4% 5%;
     /* margin-top: 5%;
     margin-bottom: 3%; */
@@ -18,6 +18,7 @@
 }
 h2{
     margin-bottom: 5%;
+    color: #FF5C75;
 }
 #name,#email,#pass{
     border: 1px solid rgb(215, 215, 215);
@@ -29,22 +30,33 @@ h2{
     margin-bottom: 6%;
     border-radius: 5px;
 
+
 }
 label{
    text-align: left;
    display: block; 
+   color: #FF5C75;
+
 }
 #terms{
     font-size: 13px;
 }
 #submit{
-    width: 99%;
-    margin: 5% 0%;
+    margin: auto;
+    margin-top: 3%;
+    width:60%;
+    /* margin: 5% 0%; */
    font-size: 15px;
    padding: 3% 0%;
    border-radius: 10px;
    border: 1px solid rgb(215, 215, 215);
    cursor: not-allowed;
+   color: #FF5C75;
+   border:1px solid #FF5C75;
+   font-weight: bolder;
+   display: block;
+   background-color: white;
+
 }
 #haveaccount{
    text-decoration: none;
